@@ -1,19 +1,20 @@
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
-public class FieldTest {
-    int numberOfRows = 3;
-    int numberOfColumns = 5;
-    Field field = new Field(numberOfRows,numberOfColumns);
+public class FieldTest
+{
     @Test
-    public void returnsNumberOfRows()
-    {
-        assertEquals(numberOfRows,field.getNumberOfRows());
-    }
-    @Test
-    public void returnsNumberOfColumns()
-    {
-        assertEquals(numberOfColumns,field.getNumberOfColumns());
+    public void fieldReturnsField(){
+        String fieldLayout = "22";
+        ArrayList field = new ArrayList();
+        field.add(".");
+        field.add("*");
+        field.add(".");
+        field.add(".");
+        Field fieldContent = new Field(fieldLayout,field);
+        assertEquals(field,fieldContent.getField());
     }
 }

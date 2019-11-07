@@ -1,26 +1,23 @@
+import java.util.ArrayList;
 
 public class Field {
-    int numberOfRows;
-    int numberOfColumns;
+    ArrayList field;
+    String fieldLayout;
 
-    public Field(int numberOfRows, int numberOfColumns) {
-        this.numberOfRows = numberOfRows;
-        this.numberOfColumns = numberOfColumns;
+    public Field(String fieldLayout, ArrayList field) {
+        this.field = field;
+        this.fieldLayout = fieldLayout;
     }
 
-    public int getNumberOfRows() {
-        return numberOfRows;
-    }
-
-    public int getNumberOfColumns() {
-        return numberOfColumns;
+    public ArrayList getField() {
+        return field;
     }
 
     @Override
     public String toString() {
         return "Field{" +
-                "numberOfRows=" + numberOfRows +
-                ", numberOfColumns=" + numberOfColumns +
+                "field=" + field +
+                ", fieldLayout=" + fieldLayout +
                 '}';
     }
 }
